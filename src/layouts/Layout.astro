@@ -1,0 +1,40 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="KodeOps automates your entire software development lifecycle from ideation to deployment. Reduce planning overhead by 95% with AI-powered SDLC automation." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="AI-powered SDLC automation platform. Transform ideas into structured GitHub backlogs in 30 minutes." />
+    <meta property="og:image" content="https://kodeops.dev/og-image.png" />
+    <meta property="og:url" content="https://kodeops.dev" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="AI-powered SDLC automation platform. Transform ideas into structured GitHub backlogs in 30 minutes." />
+    <meta name="twitter:image" content="https://kodeops.dev/og-image.png" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-sans antialiased">
+    <slot />
+  </body>
+</html>
